@@ -1,7 +1,7 @@
 var friends = require('../data/friends');
 
 module.exports = function(app){
-
+console.log("hello")
     app.get('/api/friends', function (req, res) {
         res.json(friends);
     });
@@ -22,10 +22,10 @@ module.exports = function(app){
             currentDifference = 0;
             match = i;
           }
+          
         }
-    
-        res.json(friends[match]);
-    
+        console.log(req.body)
+        res.json(req.body);
         //friends.push(req.body);
     });
 }
